@@ -1,21 +1,17 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import { useTransition } from 'react-spring'
-import { useDarkMode } from '../../hooks'
 import { Box, Div, Icons, Notification } from './styles'
 
 const modes = {
-  light: [`日间`, Icons.Sun, `dark`],
-  dark: [`夜览`, Icons.Moon, `auto`],
-  auto: [`自动`, Icons.SunMoon, `light`],
+  light: [`日间`, Icons.Sun,],
+  dark: [`夜览`, Icons.Moon,],
+  auto: [`自动`, Icons.SunMoon],
 }
 
 export default function DarkToggle({ size = `1em`, ...rest }) {
-  let [colorMode, setColorMode] = useDarkMode()
-  colorMode='auto'
-  console.log(colorMode)
-  if (colorMode && ![`light`, `dark`, `auto`].includes(colorMode))
-    console.error(`Invalid color mode: ${colorMode}`)
-
+  const [colorMode, set] = useState('light')
+  const onClick = useCallback(() => set(state => state == 'auto' ? 'dark' : (state == 'dark' ? 'light': 'auto')), [])
+  //  
   const transitions = useTransition(colorMode, null, {
     initial: null,
     from: { opacity: 0, transform: `translateX(100%)` },
@@ -29,10 +25,10 @@ export default function DarkToggle({ size = `1em`, ...rest }) {
         // Since we can't know the value of media queries or localStorage during SSR,
         // defer any rendering of the toggle until after rehydration on the client.
         if (!item) return null
-        const [title, Icon, nextMode] = modes[item]
+        const [title, Icon] = modes[item]
         return (
           <Div key={key} style={style}>
-            <Icon size={size} title={title} onClick={() => setColorMode(nextMode)} />
+            <Icon size={size} title={title} onClick={onClick} />
             <Notification>{title}</Notification>
           </Div>
         )

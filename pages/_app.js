@@ -2,6 +2,7 @@ import App from 'next/app'
 import { GlobalStyle } from '../components/global/styles'
 import { ThemeProvider } from 'styled-components' //全局样式
 import { theme } from '../utils/theme' //主题
+import { RssSetColorsByTheme, FallbackStyles } from '../utils/set-theme'
 
 const Noop = ({ children }) => children
 
@@ -10,7 +11,6 @@ export default class MyApp extends App {
     render () {
         const { Component, pageProps } = this.props
         const Layout = Component.Layout || Noop
-
         return (
             <>
               <GlobalStyle />

@@ -2,6 +2,8 @@ import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons } from './styles'
 import Rss from '../rss'
 import Nav from '../nav'
 import DarkToggle from '../dark-toggle'
+import Search from '../search'
+
 export default function Layout({ children }) {
     let title = ''
     let copyright = 'lee ping'
@@ -10,12 +12,17 @@ export default function Layout({ children }) {
         { title: 'Github', url: 'https://github.com/janosh/blog'},
         { title: 'Netlify', url: 'https://netlify.com'},
     ]
+    const searchIndices = [
+      { name: `Pages`, title: `Pages` },
+      { name: `Posts`, title: `Blog Posts`, type: `postHit` },
+    ]
     return (
         <>
           <HeaderDiv>
             <Logo href=''>{title}</Logo>
             <Nav />
             <DarkToggle />
+            <Search indices={searchIndices} />
           </HeaderDiv>
           {children}
           <FooterDiv>

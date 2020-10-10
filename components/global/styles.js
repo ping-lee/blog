@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
       flex-direction: column;
     }
     /* The rules below enable dark mode. */    /**eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
-    background: black;
+    background: gray;
     color: var(--color-text);
     a {
       text-decoration: none;
