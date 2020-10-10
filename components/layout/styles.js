@@ -5,7 +5,7 @@ import { Gatsby, Github, Netlify } from 'styled-icons/simple-icons'
 
 
 export const HeaderDiv = styled.header`
-  background: var(--color-b);
+  background: black;
   position: sticky;
   top: 0;
   display: grid;

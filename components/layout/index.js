@@ -5,7 +5,7 @@ import DarkToggle from '../dark-toggle'
 import Search from '../search'
 
 export default function Layout({ children }) {
-    let title = ''
+    let title = 'LP'
     let copyright = 'lee ping'
     let poweredBy = [
         { title: 'Gatsby', url: 'https://gatsbyjs.org'},
