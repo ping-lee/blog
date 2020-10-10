@@ -16,7 +16,7 @@ export const HeaderDiv = styled.header`
   font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
   grid-template-columns: auto 1fr auto auto;
-  border-bottom: 1px solid var(--color-a);
+  border-bottom: 1px solid white;// eeee
   ${mediaQueries.minTablet} {
     grid-template-areas: 'title nav darkmode search';
   }

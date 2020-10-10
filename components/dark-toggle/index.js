@@ -29,7 +29,6 @@ export default function DarkToggle({ size = `1em`, ...rest }) {
         return (
           <Div key={key} style={style}>
             <Icon size={size} title={title} onClick={onClick} />
-            <Notification>{title}</Notification>
           </Div>
         )
       })}
