@@ -22,7 +22,7 @@ export default function Layout({ children }) {
             <Logo href=''>{title}</Logo>
             <Nav />
             <DarkToggle />
-            <Search indices={searchIndices} />
+            {/** <Search indices={searchIndices} /> */}
           </HeaderDiv>
           {children}
           <FooterDiv>
