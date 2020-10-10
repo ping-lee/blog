@@ -36,7 +36,7 @@ export default function Search({ indices, collapse = true, size, ...rest }) {
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <Input onFocus={() => setFocus(true)} {...{ size, collapse, focus }} />
-         <HitsWrapper show={query.length > 0 && focus}>
+        <HitsWrapper show={query.length > 0 && focus}>
           {indices.map(({ name, title, type }) => (
             <Index key={name} indexName={name}>
               <header>
