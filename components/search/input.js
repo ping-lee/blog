@@ -4,18 +4,16 @@ import { Form, Input, SearchIcon } from './styles'
 
 export default connectSearchBox(({ refine, size = `1em`, ...rest }) => (
   <Form>
-    {/**
-     <Input
+    <Input
       type="text"
       placeholder=""
       aria-label="Search"
       onChange={e => refine(e.target.value)}
       // iOS Safari doesn't blur input automatically on tap outside.
       onMouseLeave={e => e.target.blur()}
-      size={size}
+      size='0.81em'
       {...rest}
     />
-     */}
     <SearchIcon size={size} />
   </Form>
 ))
