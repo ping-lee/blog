@@ -21,7 +21,7 @@ export default function Layout({ children }) {
           <HeaderDiv>
             <Logo href=''>{title}</Logo>
             <Nav />
-            <DarkToggle />
+            {/**<DarkToggle /> */}
             <Search indices={searchIndices} />
           </HeaderDiv>
           {children}
