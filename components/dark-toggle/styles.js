@@ -13,7 +13,7 @@ export const Box = styled.div`
 
 export const Div = styled(animated.div)`
   svg {
-    vertical-align: -0.1em!important;
+    vertical-align: -0.1em;
   }
 `
 

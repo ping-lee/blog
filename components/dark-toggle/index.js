@@ -25,11 +25,10 @@ export default function DarkToggle({ size = `1em`, ...rest }) {
         // Since we can't know the value of media queries or localStorage during SSR,
         // defer any rendering of the toggle until after rehydration on the client.
         if (!item) return null
-        item = 'light'
         const [Icon] = modes[item]
         return (
           <Div key={key} style={style}>
-            <Icon size={size} onClick={onClick} />
+            <Icons.Sun size={size} onClick={onClick} />
           </Div>
         )
       })}
