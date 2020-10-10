@@ -3,9 +3,9 @@ import { useTransition } from 'react-spring'
 import { Box, Div, Icons, Notification } from './styles'
 
 const modes = {
-  light: [`日间`, Icons.Sun,],
-  dark: [`夜览`, Icons.Moon,],
-  auto: [`自动`, Icons.SunMoon],
+  light: [Icons.Sun],
+  dark: [Icons.Moon],
+  auto: [Icons.SunMoon],
 }
 
 export default function DarkToggle({ size = `1em`, ...rest }) {
@@ -25,10 +25,10 @@ export default function DarkToggle({ size = `1em`, ...rest }) {
         // Since we can't know the value of media queries or localStorage during SSR,
         // defer any rendering of the toggle until after rehydration on the client.
         if (!item) return null
-        const [title, Icon] = modes[item]
+        const [Icon] = modes[item]
         return (
           <Div key={key} style={style}>
-            <Icon size={size} title={title} onClick={onClick} />
+            <Icon size={size} onClick={onClick} />
           </Div>
         )
       })}
