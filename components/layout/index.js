@@ -18,7 +18,7 @@ export default function Layout({ children, setTheme }) {
     return (
         <>
           <HeaderDiv>
-            <Logo href=''>{title}</Logo>
+            <Logo href='/'>{title}</Logo>
             <Nav />
             <DarkToggle setTheme={setTheme} />
             {/** <Search indices={searchIndices} /> */}
