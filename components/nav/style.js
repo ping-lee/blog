@@ -67,9 +67,9 @@ export const NavLink = styled(Link).attrs({
   color: inherit;
   transition: 0.3s;
   &.active {
-    color: var(--color-a);
+    color: ${props => props.theme.colors.a};
   }
   :hover {
-    color: var(--color-blue-light);
+    color: ${props => props.theme.colors.c};
   }
 `

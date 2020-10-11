@@ -1,10 +1,9 @@
-import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons } from './styles'
+import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons, Copyright } from './styles'
 import Rss from '../rss'
 import Nav from '../nav'
 import DarkToggle from '../dark-toggle'
-import Search from '../search'
 
-export default function Layout({ children }) {
+export default function Layout({ children, setTheme }) {
     let title = 'LP'
     let copyright = 'lee ping'
     let poweredBy = [
@@ -21,15 +20,15 @@ export default function Layout({ children }) {
           <HeaderDiv>
             <Logo href=''>{title}</Logo>
             <Nav />
-            <DarkToggle />
+            <DarkToggle setTheme={setTheme} />
             {/** <Search indices={searchIndices} /> */}
           </HeaderDiv>
           {children}
           <FooterDiv>
-            <span>
+            <Copyright>
                 © {new Date().getFullYear()} - {copyright}
                 &emsp; <Rss />
-            </span>
+            </Copyright>
             <PoweredBy>
                 支持：&ensp;
                 {poweredBy.map(({ url, title }) => {

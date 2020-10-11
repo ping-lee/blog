@@ -1,14 +1,9 @@
 import styled from 'styled-components'
 import MyLayout from '../components/layout'
 
-const Title = styled.h1`
-font-size: ${({theme}) => theme.colors.primary};
-color: red;
-`
-
 const HomePage = () => {
     return (
-        <Title>Hello world</Title>
+        <h1>Hello world</h1>
     )
 }
 

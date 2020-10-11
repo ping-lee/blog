@@ -28,14 +28,14 @@ export const GlobalStyle = createGlobalStyle`
       display: flex;
       flex-direction: column;
     }
-    /* The rules below enable dark mode. */    /**eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
-    background: gray;
-    color: var(--color-text);
+    /* The rules below enable dark mode. */
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
     a {
       text-decoration: none;
-      color: var(--color-link);
+      color: ${props => props.theme.colors.link};
       :hover {
-        color: var(--color-a);
+        color: ${props => props.theme.colors.a};
       }
     }
   }
@@ -48,8 +48,8 @@ export const GlobalStyle = createGlobalStyle`
     overflow-y: hidden;
   }
   blockquote, details {
-    border-left: 0.25em solid var(--color-link);
-    background: var(--color-accentBackground);
+    border-left: 0.25em solid ${props => props.theme.colors.link};
+    background: ${props => props.theme.colors.accentBackground};
     padding: 0.1em 0.3em 0.1em 1em;
     margin: 0;
     summary {
@@ -61,16 +61,16 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   table td, table th {
-    border: 1px solid var(--color-text);
+    border: 1px solid ${props => props.theme.colors.text};
     padding: 0.2em 0.6em;
   }
   tbody tr:nth-child(odd) {
-    background: var(--color-accentBackground);
+    background: ${props => props.theme.colors.accentBackground};
   }
   div.scroll {
     overflow: scroll;
     margin: 1em auto;
-    border: 1px solid var(--color-text);
+    border: 1px solid ${props => props.theme.colors.text};
     border-width: 0 1px;
     white-space: nowrap;
     table td, table th {

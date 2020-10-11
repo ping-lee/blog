@@ -1,17 +1,23 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTransition } from 'react-spring'
 import { Box, Div, Icons, Notification } from './styles'
-
+import darkTheme from '../../utils/theme/dark'
+import lightTheme from '../../utils/theme/light'
 const modes = {
   light: [`日间`, Icons.Sun,],
   dark: [`夜览`, Icons.Moon,],
   auto: [`自动`, Icons.SunMoon],
 }
 
-export default function DarkToggle({ size = `1em`, ...rest }) {
-  const [colorMode, set] = useState('light')
-  const onClick = useCallback(() => set(state => state == 'auto' ? 'dark' : (state == 'dark' ? 'light': 'auto')), [])
-  //  
+export default function DarkToggle({ size = `1em`, setTheme, ...rest }) {
+  const [colorMode, setcolorMode] = useState('light')
+  const onClick = () => setcolorMode(state => state == 'auto' ? 'dark' : (state == 'dark' ? 'light': 'auto'))
+
+  useEffect(() => {
+    if (colorMode =='dark')setTheme(darkTheme)
+    if (colorMode =='light')setTheme(lightTheme)
+  })
+
   const transitions = useTransition(colorMode, null, {
     initial: null,
     from: { opacity: 0, transform: `translateX(100%)` },

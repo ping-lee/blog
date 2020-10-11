@@ -32,7 +32,7 @@ export const COLORS = {
 }
 
 const { gray, blue, orange } = COLORS
-
+//
 export const MODE_COLORS = {
   text: {
     light: `black`,

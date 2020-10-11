@@ -5,7 +5,7 @@ import { Gatsby, Github, Netlify } from 'styled-icons/simple-icons'
 
 
 export const HeaderDiv = styled.header`
-  background: black;
+  background: ${props => props.theme.colors.b};
   position: sticky;
   top: 0;
   display: grid;
@@ -16,7 +16,7 @@ export const HeaderDiv = styled.header`
   font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
   grid-template-columns: auto 1fr auto auto;
-  border-bottom: 1px solid red;// eeee
+  border-bottom: 1px solid ${props => props.theme.colors.a};
   ${mediaQueries.minTablet} {
     grid-template-areas: 'title nav darkmode search';
   }
@@ -31,11 +31,11 @@ export const Logo = styled(Link)`
 `
 
 export const FooterDiv = styled.footer`
-  background: var(--color-b);
+  background: ${props => props.theme.colors.b};
   padding: 5vh 5vw;
   color: white;
   a {
-    color: var(--color-lightLink);
+    color: ${props => props.theme.colors.lightLink};
   }
   display: grid;
   place-items: center;
@@ -44,14 +44,14 @@ export const FooterDiv = styled.footer`
     'source'
     'poweredBy';
   grid-gap: 4vh 6vw;
-  ${mediaQueries.minPhone} {
-    grid-template-areas:
-      'copyright source'
-      'poweredBy poweredBy';
-  }
+  
   ${mediaQueries.minTablet} {
     grid-template-areas: 'copyright source poweredBy';
   }
+`
+
+export const Copyright = styled.span`
+  margin-left: -13px;
 `
 
 export const PoweredBy = styled.div`
