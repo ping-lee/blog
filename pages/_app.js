@@ -3,6 +3,7 @@ import App from 'next/app'
 import { GlobalStyle } from '../components/global/styles'
 import { ThemeProvider  } from 'styled-components' 
 import lightTheme from '../utils/theme/light'
+import '../styles.css'
 
 const Noop = ({ children }) => children
 

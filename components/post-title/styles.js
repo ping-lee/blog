@@ -1,5 +1,6 @@
 //import Image from 'gatsby-image'
 import styled from 'styled-components'
+import LazyImage from '../lazy-img'
 
 export const PageTitleDiv = styled.hgroup`
   position: relative;
@@ -26,10 +27,8 @@ export const PageTitleDiv = styled.hgroup`
   }
 `
 
-export const Img = styled.img.attrs(
-  p => !p.fluid && p.src && { as: `img`, src: p.dataURI || p.src }
-)`
-  position: absolute !important;
+export const Img = styled(LazyImage)`
+  //position: absolute !important;
   z-index: -1;
   width: 100%;
   height: 100%;

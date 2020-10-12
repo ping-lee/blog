@@ -2,11 +2,13 @@ import styled from 'styled-components'
 import MyLayout from '../components/layout'
 import { getPostBySlug } from '../utils/api'
 import PageTitle from '../components/post-title'
+import LazyImage from '../components/lazy-img'
+import generateLazyImage from '../utils/generate-lazy-image'
 
-const HomePage = ({ mdx }) => {
+const HomePage = ({ mdx, lyimg }) => {
     return (
         <>
-          <PageTitle img={mdx.data.cover.img} css="min-height: 35em">
+          <PageTitle lyimg={lyimg} css="min-height: 35em">
               ss
           </PageTitle>
         </>
@@ -21,9 +23,11 @@ export async function getStaticProps(context) {
     // 2.获取markdown文件路径
     // 3.图片组件
     let mdx = getPostBySlug('landing')
-    //console.log(mdx)
+    const { data, content } = mdx
+    const lyimg = await generateLazyImage('/pages/loading/oeschinen-lake.jpg')
+    //console.log(lyimg)
   return {
-    props: { mdx }, // will be passed to the page component as props
+    props: { mdx, lyimg }, // will be passed to the page component as props
   }
 }
 
