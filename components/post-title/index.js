@@ -3,10 +3,10 @@ import { Caption } from '../styles'
 import { Img, PageTitleDiv } from './styles'
 
 export default function PageTitle(props) {
-  const { children, lyimg, source, caption, url, ...rest } = props
+  const { children, hero, source, caption, url, ...rest } = props
   return (
     <PageTitleDiv {...rest}>
-      <Img src={lyimg.src} lqip={lyimg.lqip} />
+      <Img src={hero.src} lqip={hero.lqip} />
       {children}
       {(caption || source) && (
         <Caption showOnHoverParent={PageTitleDiv}>

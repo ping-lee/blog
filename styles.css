@@ -1,6 +1,7 @@
 .lazy-loading-img .wrapper {
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 .lazy-loading-img img {
   position: absolute;

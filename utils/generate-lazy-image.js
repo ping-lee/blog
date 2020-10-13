@@ -3,7 +3,7 @@ import sharp from 'sharp'
 
 sharp.cache(false);
 async function generateLazyImage(src) {
-  const { body } = await got(`http://www.tristanme.com/${src}`, { responseType: 'buffer' });
+  const { body } = await got(`http://localhost:81/${src}`, { responseType: 'buffer' });
   const sharpImage = sharp(body);
   const { width, height, format } = await sharpImage.metadata();
   

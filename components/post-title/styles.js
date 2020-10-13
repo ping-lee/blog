@@ -6,9 +6,9 @@ export const PageTitleDiv = styled.hgroup`
   position: relative;
   color: white;
   /* Use flex instead of grid. Else Safari messes up vertical alignment of children. */
-  display: flex;
+  //display: flex;
   flex-direction: column;
-  place-content: center;
+  place-content: center!important;
   min-height: 20em;
   flex: 1; /* for filling height between header and footer on 404 page */
   font-size: calc(1em + 0.5vw);
@@ -28,7 +28,7 @@ export const PageTitleDiv = styled.hgroup`
 `
 
 export const Img = styled(LazyImage)`
-  //position: absolute !important;
+  position: absolute !important;
   z-index: -1;
   width: 100%;
   height: 100%;
