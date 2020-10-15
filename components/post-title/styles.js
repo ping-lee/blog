@@ -20,7 +20,6 @@ export const PageTitleDiv = styled.hgroup`
     background: rgba(0, 0, 0, 0.7);
     border-radius: 0.2em;
     padding: 0.1em 0.4em;
-    margin: 1em;
   }
   a {
     color: var(--color-lightLink);

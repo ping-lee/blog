@@ -8,7 +8,7 @@ export const Grid = styled.div`
   );
   grid-gap: ${props => props.gap || `calc(1em + 1vw)`};
   text-align: ${props => props.align};
-  max-width: ${props => props.children.length === 1 && props.maxWidth};
+  //max-width: ${props => props.children.length === 1 && props.maxWidth};
   grid-auto-rows: ${props => props.height};
 `
 
