@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/a', (req, res) => {
-    return app.render(req, res, '/a', req.query)
+    return res.send('Hello World from /a')
   })
 
   server.get('/b', (req, res) => {
