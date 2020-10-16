@@ -1,5 +1,5 @@
 import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons, Copyright } from './styles'
-import Rss from '../rss'
+import { RSS } from '../rss'
 import Nav from '../nav'
 import DarkToggle from '../dark-toggle'
 
@@ -27,7 +27,7 @@ export default function Layout({ children, setTheme }) {
           <FooterDiv>
             <Copyright>
                 © {new Date().getFullYear()} - {copyright}
-                &emsp; <Rss />
+                &emsp; <RSS />
             </Copyright>
             <PoweredBy>
                 支持：&ensp;

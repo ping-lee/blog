@@ -3,9 +3,8 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import dayjs from 'dayjs'
 import 'dayjs/locale/zh-cn'
-import generateLazyImage from './generate-lazy-image'
 
-const postsDirectory = join(process.cwd(), 'content')
+const postsDirectory = join(process.cwd(), 'public')
 
 export function getPostSlugs(dir) {
   return fs.readdirSync(join(postsDirectory, dir))
@@ -13,7 +12,7 @@ export function getPostSlugs(dir) {
 
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.mdx`)
+  const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
   //console.log(data, content)

@@ -48,8 +48,8 @@ export async function getStaticProps(context) {
     //const { data, content } = mdx
     //const title = data.title
     // img
-    const hero = await generateLazyImage('/pages/loading/oeschinen-lake.jpg')
-    const me = await generateLazyImage('/pages/loading/me.jpg')
+    const hero = await generateLazyImage('/pages/landing/oeschinen-lake.jpg')
+    const me = await generateLazyImage('/pages/landing/me.jpg')
     const profil = await markdownToHtml(landingmd.content)
     // posts
     // posts 的content应转为html

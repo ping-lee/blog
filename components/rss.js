@@ -12,7 +12,7 @@ const Link = styled.a`
   position: relative;
 `
 
-export default () => (
+export const RSS = () => (
   <Link href="/rss.xml" alt="Subscribe" title="RSS feed">
     <Rss size="1em" />
     <Title>RSS</Title>
