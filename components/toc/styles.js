@@ -4,11 +4,11 @@ import { Close as Cross } from 'styled-icons/material'
 import { mediaQueries } from '../../utils/media-queries'
 
 export const TocDiv = styled.aside`
-  background: var(--color-background);
+  background: ${props => props.theme.colors.background};
   padding: 0.7em 1.2em;
   margin: 1em 0;
   border-radius: 0.5em;
-  box-shadow: 0 0 1em 3px var(--color-shadow);
+  box-shadow: 0 0 1em 3px ${props => props.theme.colors.shadow};
   height: max-content;
   max-height: 80vh;
   z-index: 3;
@@ -23,7 +23,7 @@ export const TocDiv = styled.aside`
   }
   ${mediaQueries.maxLaptop} {
     position: fixed;
-    bottom: 1em;
+    bottom: 2em;
     left: 1em;
     ${props => !props.open && `height: 0;`};
     visibility: ${props => (props.open ? `visible` : `hidden`)};
@@ -42,7 +42,7 @@ export const Title = styled.h2`
   margin: 0;
   padding-bottom: 0.5em;
   display: flex;
-  color: var(--color-gray);
+  color: ${props => props.theme.colors.gray};
 `
 
 export const TocLink = styled.a`
