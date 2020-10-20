@@ -11,7 +11,7 @@ export const HeaderDiv = styled.header`
   display: grid;
   grid-gap: calc(1em + 1vw);
   z-index: 4;
-  padding: 1em;
+  //padding: 1em;
   color: white;
   font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
