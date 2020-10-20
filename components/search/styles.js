@@ -51,7 +51,7 @@ const expanded = css`
 export const Input = styled.input`
   outline: none;
   border: none;
-  font-size: ${p => p.size};
+  font-size: small;
   background: transparent;
   transition: 0.3s;
   border-radius: 0.2em;
