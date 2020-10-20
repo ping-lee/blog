@@ -23,7 +23,7 @@ export const TocDiv = styled.aside`
   }
   ${mediaQueries.maxLaptop} {
     position: fixed;
-    bottom: 2em;
+    bottom: 30%;
     left: 1em;
     ${props => !props.open && `height: 0;`};
     visibility: ${props => (props.open ? `visible` : `hidden`)};
@@ -75,6 +75,7 @@ export const TocToggle = styled(Cross).attrs(props => ({
   as: props.opener && BookContent,
   size: props.size || `1.6em`,
 }))`
+  bottom: 2px;
   z-index: 2;
   transition: 0.3s;
   justify-self: end;

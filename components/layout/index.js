@@ -2,6 +2,7 @@ import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons, Copyright } from './style
 import { RSS } from '../rss'
 import Nav from '../nav'
 import DarkToggle from '../dark-toggle'
+import Search from '../search'
 
 export default function Layout({ children, setTheme }) {
     let title = 'LP'
@@ -21,7 +22,7 @@ export default function Layout({ children, setTheme }) {
             <Logo href='/'>{title}</Logo>
             <Nav />
             <DarkToggle setTheme={setTheme} />
-            {/** <Search indices={searchIndices} /> */}
+            <Search indices={searchIndices} />
           </HeaderDiv>
           {children}
           <FooterDiv>
