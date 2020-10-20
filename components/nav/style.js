@@ -10,6 +10,7 @@ import Link from 'next/link'
 export const NavDiv = styled.nav`
   font-size: 1.1em;
   display: grid;
+  vertical-align: middle;
   grid-gap: calc(1em + 1vw);
   transition: 0.3s;
   a {

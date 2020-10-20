@@ -10,6 +10,7 @@ export const HeaderDiv = styled.header`
   top: 0;
   display: grid;
   grid-gap: calc(1em + 1vw);
+  vertical-align: middle;
   z-index: 4;
   //padding: 1em;
   color: white;
@@ -38,6 +39,7 @@ export const FooterDiv = styled.footer`
     color: ${props => props.theme.colors.lightLink};
   }
   display: grid;
+  vertical-align: middle;
   place-items: center;
   grid-template-areas:
     'copyright'
