@@ -11,7 +11,7 @@ export const HeaderDiv = styled.header`
   display: grid;
   grid-gap: calc(1em + 1vw);
   z-index: 4;
-  padding: 1em!important;
+  padding: 1em;
   color: white;
   font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
@@ -21,15 +21,14 @@ export const HeaderDiv = styled.header`
     grid-template-areas: 'title nav darkmode search';
   }
 `
-/*
+
 export const Logo = styled.a`
-  grid-area: title;
-  font-size: 2.4em;
+  //grid-area: title;
+  //font-size: 2.4em;
   transform: scale(1, 0.85);
   color: inherit;
   place-self: center;
 `
-*/
 
 export const FooterDiv = styled.footer`
   background: ${props => props.theme.colors.b};
