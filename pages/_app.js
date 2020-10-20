@@ -3,6 +3,8 @@ import App from 'next/app'
 import { GlobalStyle } from '../components/global/styles'
 import { ThemeProvider  } from 'styled-components' 
 import lightTheme from '../utils/theme/light'
+import 'highlight.js/styles/github.css'
+import 'katex/dist/katex.min.css'
 import '../styles.css'
 
 const Noop = ({ children }) => children

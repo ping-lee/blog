@@ -24,9 +24,13 @@ export const PageTitleDiv = styled.hgroup`
   a {
     color: var(--color-lightLink);
   }
+  /** fixed img component */
+  .lazy-loading-img {
+    display: contents;
+  }
 `
 
-export const Img = styled.img`
+export const Img = styled(LazyImage)`
   position: absolute !important;
   z-index: -1;
   width: 100%;

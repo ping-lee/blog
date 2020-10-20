@@ -8,11 +8,11 @@ export default function PostExcerpt({ post, noText }) {
   //console.log(post.data)
   return (
     <Post>
-      <Link href={slug}>
+      <Link href={`/posts${slug}`}>
         <Cover src={`/posts/${cover.fileName}/${cover.img}`} />
       </Link>
       <h3 css="margin: 0.8em auto 0.5em;">
-        <Link href={slug}>{title}</Link>
+        <Link href={`/posts${slug}`}>{title}</Link>
       </h3>
       <PostMeta {...post.data} />
       

@@ -12,7 +12,7 @@ export function getPostSlugs(dir) {
 
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fullPath = join(postsDirectory, `${realSlug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
   //console.log(data, content)
@@ -53,7 +53,8 @@ export async function  getAllPosts(dir, fields = []) {
       const tmp = JSON.stringify(replacer(data.date))
       data.date = tmp  // 存在重复
       //console.log(data.dateFormated)
-      data.cover.fileName = slug;
+      data.cover.fileName = slug
+      data.abSlug = slug
       data.timeToRead = readingTime(content)
       return { data, content }
     })

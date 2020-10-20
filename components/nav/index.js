@@ -19,7 +19,7 @@ export default function Nav(props) {
     return (
         <>
         <NavToggle opener open={open} onClick={() => setOpen(true)} />
-        <NavDiv ref={ref} open={open} onScroll={e => e.preventDefault()} {...props}>
+        <NavDiv ref={ref} open={open} onScroll={e => e.preventDefault()} {...props} onClick={() => setOpen(false)}>
             <NavToggle open={open} onClick={() => setOpen(false)} />
             {nav.map(({ title, url }) => (
             <NavLink key={url} href={url}>

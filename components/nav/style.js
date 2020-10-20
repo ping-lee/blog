@@ -12,6 +12,9 @@ export const NavDiv = styled.nav`
   display: grid;
   grid-gap: calc(1em + 1vw);
   transition: 0.3s;
+  a {
+    color: white;
+  }
   /* Desktop */
   ${mediaQueries.minTablet} {
     grid-auto-flow: column;
@@ -64,7 +67,6 @@ export const NavLink = styled(Link).attrs({
   partiallyActive: true,
 })`
   white-space: nowrap;
-  color: inherit;
   transition: 0.3s;
   &.active {
     color: ${props => props.theme.colors.a};
