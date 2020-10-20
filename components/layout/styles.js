@@ -13,7 +13,7 @@ export const HeaderDiv = styled.header`
   z-index: 4;
   padding: 1em;
   color: white;
-  //font-size: 1.2em;
+  font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
   grid-template-columns: auto 1fr auto auto;
   border-bottom: 1px solid ${props => props.theme.colors.a};

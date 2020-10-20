@@ -51,6 +51,7 @@ const expanded = css`
 export const Input = styled.input`
   outline: none;
   border: none;
+  font-size: ${p => p.size};
   background: transparent;
   transition: 0.3s;
   border-radius: 0.2em;
@@ -65,7 +66,7 @@ export const Form = styled.form`
 
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
-  background: var(--color-background);
+  background: ${props => props.theme.colors.background};
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
@@ -113,10 +114,9 @@ export const HitsWrapper = styled.div`
 
 export const PoweredBy = () => (
   <span css="font-size: 0.6em; text-align: end; padding: 0;">
-    由{` `}
+    Powered by{` `}
     <a href="https://algolia.com">
       <Algolia size="1em" /> Algolia
     </a>
-    {` `}提供支持
   </span>
 )

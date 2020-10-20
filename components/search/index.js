@@ -8,8 +8,8 @@ import { HitsWrapper, PoweredBy, Root } from './styles'
 
 const Results = connectStateResults(
   ({ searching, searchState, searchResults: res }) =>
-    (searching && <div>搜索中...</div>) ||
-    (res?.nbHits === 0 && <div>未找到有关 &apos;{searchState.query}&apos;的东西</div>)
+    (searching && <div>Searching...</div>) ||
+    (res?.nbHits === 0 && <div>No results for &apos;{searchState.query}&apos;</div>)
 )
 
 const Stats = connectStateResults(

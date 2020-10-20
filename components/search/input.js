@@ -6,7 +6,7 @@ export default connectSearchBox(({ refine, size = `1em`, ...rest }) => (
   <Form>
     <Input
       type="text"
-      placeholder="搜索"
+      placeholder="Search"
       aria-label="Search"
       onChange={e => refine(e.target.value)}
       // iOS Safari doesn't blur input automatically on tap outside.
