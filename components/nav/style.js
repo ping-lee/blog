@@ -49,6 +49,9 @@ export const NavToggle = styled(Cross).attrs(props => ({
   size: props.opener ? `1.2em` : `1.6em`,
 }))`
   transition: 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid red;
   cursor: pointer;
   :hover {
     transform: scale(1.05);
