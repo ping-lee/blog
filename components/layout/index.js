@@ -1,4 +1,4 @@
-import { HeaderDiv, Logo, FooterDiv, PoweredBy, Icons, Copyright } from './styles'
+import { HeaderDiv, FooterDiv, PoweredBy, Icons, Copyright } from './styles'
 import { RSS } from '../rss'
 import Nav from '../nav'
 import DarkToggle from '../dark-toggle'
@@ -19,7 +19,7 @@ export default function Layout({ children, setTheme }) {
     return (
         <>
           <HeaderDiv>
-            <Logo href='/'>{title}</Logo>
+            {/** <Logo href='/'>{title}</Logo> */}
             <Nav />
             <DarkToggle setTheme={setTheme} />
             <Search indices={searchIndices} />
