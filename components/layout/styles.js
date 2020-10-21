@@ -24,8 +24,8 @@ export const HeaderDiv = styled.header`
 `
 
 export const Logo = styled.a`
-  //grid-area: title;
-  //font-size: 2.4em;
+  grid-area: title;
+  font-size: 2.4em;
   transform: scale(1, 0.85);
   color: inherit;
   place-self: center;

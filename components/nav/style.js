@@ -10,12 +10,8 @@ import Link from 'next/link'
 export const NavDiv = styled.nav`
   font-size: 1.1em;
   display: grid;
-  vertical-align: middle;
   grid-gap: calc(1em + 1vw);
   transition: 0.3s;
-  a {
-    color: white;
-  }
   /* Desktop */
   ${mediaQueries.minTablet} {
     grid-auto-flow: column;
@@ -49,11 +45,6 @@ export const NavToggle = styled(Cross).attrs(props => ({
   size: props.opener ? `1.2em` : `1.6em`,
 }))`
   transition: 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid red;
-  height: 1em!important;
-  width: 1em!important;
   cursor: pointer;
   :hover {
     transform: scale(1.05);
@@ -73,11 +64,12 @@ export const NavLink = styled(Link).attrs({
   partiallyActive: true,
 })`
   white-space: nowrap;
+  color: inherit;
   transition: 0.3s;
   &.active {
-    color: ${props => props.theme.colors.a};
+    color: var(--color-a);
   }
   :hover {
-    color: ${props => props.theme.colors.c};
+    color: var(--color-blue-light);
   }
 `

@@ -6,7 +6,6 @@ import { Search } from 'styled-icons/fa-solid'
 export const Root = styled.div`
   position: relative;
   display: grid;
-  vertical-align: middle;
   grid-gap: 1em;
   color: var(--color-text);
 `
@@ -14,7 +13,6 @@ export const Root = styled.div`
 export const SearchIcon = styled(Search)`
   pointer-events: none;
   color: white;
-  border: 1px solid white;
 `
 
 const focus = css`
@@ -57,21 +55,18 @@ export const Input = styled.input`
   background: transparent;
   transition: 0.3s;
   border-radius: 0.2em;
-  border: 1px solid yellow;
   ${props => (props.collapse ? collapsed : expanded)};
 `
 
 export const Form = styled.form`
   display: flex;
-  font-size: ${p => p.size};
   flex-direction: row-reverse;
   align-items: center;
-  border: 1px solid red;
 `
 
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
-  background: ${props => props.theme.colors.background};
+  background: var(--color-background);
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
