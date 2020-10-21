@@ -6,6 +6,7 @@ import { Moon, Sun } from 'styled-icons/fa-solid'
 export const Box = styled.div`
   cursor: pointer;
   display: grid;
+  margin-left: 30px;
   > * {
     grid-area: 1/1;
   }
