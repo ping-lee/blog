@@ -10,6 +10,7 @@ export const HeaderDiv = styled.header`
   top: 0;
   display: flex;
   grid-gap: calc(1em + 1vw);
+  justify-content: center;
   vertical-align: middle;
   z-index: 4;
   padding: 1em;

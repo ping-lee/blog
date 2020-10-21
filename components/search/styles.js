@@ -5,8 +5,6 @@ import { Search } from 'styled-icons/fa-solid'
 
 export const Root = styled.div`
   position: relative;
-  display: grid;
-  grid-gap: 1em;
   color: var(--color-text);
 `
 
