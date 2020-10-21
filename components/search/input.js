@@ -4,7 +4,8 @@ import { Form, Input, SearchIcon } from './styles'
 
 export default connectSearchBox(({ refine, size = `1em`, ...rest }) => (
   <Form>
-    <Input
+    {/**
+     <Input
       type="text"
       placeholder="Search"
       aria-label="Search"
@@ -14,6 +15,7 @@ export default connectSearchBox(({ refine, size = `1em`, ...rest }) => (
       size={size}
       {...rest}
     />
+     */}
     <SearchIcon size={size} />
   </Form>
 ))
