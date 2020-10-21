@@ -9,6 +9,7 @@ export const Root = styled.div`
   vertical-align: middle;
   grid-gap: 1em;
   color: var(--color-text);
+  font-size: 7px;
 `
 
 export const SearchIcon = styled(Search)`
