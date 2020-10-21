@@ -12,7 +12,7 @@ export const HeaderDiv = styled.header`
   grid-gap: calc(1em + 1vw);
   vertical-align: middle;
   z-index: 4;
-  //padding: 1em;
+  padding: 1em;
   color: white;
   font-size: 1.2em;
   grid-template-areas: 'nav title darkmode search';
