@@ -63,6 +63,7 @@ export const Input = styled.input`
 
 export const Form = styled.form`
   display: flex;
+  font-size: ${p => p.size};
   flex-direction: row-reverse;
   align-items: center;
   border: 1px solid red;
