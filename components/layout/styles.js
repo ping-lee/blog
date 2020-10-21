@@ -8,7 +8,7 @@ export const HeaderDiv = styled.header`
   background: ${props => props.theme.colors.b};
   position: sticky;
   top: 0;
-  display: grid;
+  display: flex;
   grid-gap: calc(1em + 1vw);
   vertical-align: middle;
   z-index: 4;
