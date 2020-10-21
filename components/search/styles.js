@@ -49,10 +49,10 @@ const expanded = css`
 `
 
 export const Input = styled.input`
-  //outline: none;
-  //border: none;
+  outline: none;
+  border: none;
   //font-size: ${p => p.size};
-  //background: transparent;
+  background: transparent;
   transition: 0.3s;
   border-radius: 0.2em;
  ${props => (props.collapse ? collapsed : expanded)};
