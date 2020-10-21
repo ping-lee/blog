@@ -14,6 +14,7 @@ export const Root = styled.div`
 export const SearchIcon = styled(Search)`
   pointer-events: none;
   color: white;
+  border: 1px solid white;
 `
 
 const focus = css`
@@ -56,6 +57,7 @@ export const Input = styled.input`
   background: transparent;
   transition: 0.3s;
   border-radius: 0.2em;
+  border: 1px solid yellow;
   ${props => (props.collapse ? collapsed : expanded)};
 `
 
@@ -63,6 +65,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  border: 1px solid red;
 `
 
 export const HitsWrapper = styled.div`
